@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TO DO supply a title</title>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reg.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+             .header{
+                width:100%;
+                background:rgba(0,0,0,0.5);
+                font-size:50px;
+                color:white; 
+                text-transform:uppercase;
+                text-shadow:2px 2px 2px black;
+                margin-top:0px;
+                text-align: left;
+               
+            }
+            body
+            {
+                font-size: 17px
+            }        
+            .add{
+                font-size:20px;
+                text-align:center;
+                background:rgba(0,0,0,0.5);
+                width:40%;
+                color:white;
+                margin:10px 0;
+            }
+            .ft{
+                height: 350px;
+                background-color: #333;
+                width:100%;
+                margin-bottom:0px;
+                color: white; 
+            }
+
+
+            .reg{
+                background:rgba(0,0,0,0.1);
+                left:25%;
+                width:50%;
+                margin:10px;
+                border:1px solid black;
+            }
+            .hoverchange :hover{
+                background:black;
+                color: white;
+            }
+            input[type=text]{
+                width:80%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type=email]{
+                width:50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type=password]{
+                width:80%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type=date]{
+                width:60%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }                
+
+            input[type=submit]{
+                width:80%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            #match{
+                color:red;
+                font-size: 15px;
+            }
+
+            #l2{
+                font-size: 15px;
+                color:red;
+            }
+            #done{
+                font-size: 15px;
+                color:blue;
+            }
+            .popup{
+                display:none;
+             //   border:2px solid black;
+                width:40%;
+            }
+            .popup input[type=text]{
+                width:90%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            
+            #b1{
+                width:27%;
+                color:white;
+                padding: 10px 15px;
+                margin: 8px;
+                background-color: black;
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 4px;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+             #b2{
+                width:90%;
+                color:white;
+                padding: 10px 15px;
+                margin: 8px;
+                background-color: black;
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 4px;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+            #b2:hover{
+                color:black;
+                background-color: white;
+            }
+            #chn{
+                width:90%;
+                color:white;
+                padding: 10px 15px;
+                margin: 8px;
+                background-color: black;
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 4px;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+            #chn:hover{
+                color:black;
+                background-color: white;
+            }
+             #i1 {
+                width:120px;
+                height:80px;
+                margin-bottom: -10px;
+                margin-top: 2px;
+              //  padding:0px;
+            }
+            span{
+                tetx-transform:uppercase;
+                font-size:20px;
+                color:white;
+                text-shadow:2px 2px 2px black;
+            }
+            h1{
+               font-size: 30px;
+               background-color: rgba(0,0,0,0.5);
+               width:50%;
+               color:white;
+               
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script>   
+              $(document).ready(function () {
+                $("#b1").click(function () {
+                    $(".popup").show();
+                    $(".reg").hide();
+                    });
+                    $("#b2").click(function () {
+                     var otp=document.getElementById("otp1").value;
+                     var otp1=document.getElementById("hotp1").value;
+                     var ot=otp.trim();
+                     var ot1=otp1.trim();
+                     if(ot==ot1)
+                  {
+                    $(".popup").hide();
+                    $(".reg").show();
+                     document.getElementById("done").innerHTML="email ID sucessfully validate!!!";
+                      document.getElementById("btn").disabled=false;
+                  }
+                else{
+   
+                    document.getElementById("otp1").value="";
+                    document.getElementById("match").innerHTML="otp not matching";
+                   
+                }
+        
+                 
+                    });
+                    $("#chn").click(function () {
+                    $(".reg").show();
+                   $(".popup").hide();
+                    
+                    });
+                  });
+                
+        </script>
+        <script>
+        
+        
+              function check(){
+                  var x=document.getElementById("p1").value;
+                  var y=document.getElementById("p2").value;
+                  if(x!=y){
+                     document.getElementById("l2").innerHTML="password not matching";
+                  }
+                  
+                  if(x==y){
+                      document.getElementById("l2").innerHTML="";
+                  }
+                 
+              }
+                       
+              function sendOTP()
+             {  
+                document.getElementById("match").innerHTML="";
+                var email=document.getElementById("email1").value;
+                //alert("Hi"+email);
+                var obj=new XMLHttpRequest();
+                if(obj)
+                {
+                    try{
+                        obj.open("get","mail.jsp?a="+email,true);
+                        obj.send(null);
+                        obj.onreadystatechange=function ()
+                        {
+                            if(obj.readyState==4 && obj.status==200)
+                            {
+                                document.getElementById("hotp1").value=obj.responseText;
+                               
+                            }
+                        };
+                    }catch(e){
+                        alert(e);
+                    }
+                }
+            }
+            
+              
+              
+              
+              
+            </script>
+    </head>
+    <body>
+        <form action="register.jsp" method="post">
+            <div class="header">
+            &nbsp;<img id="i1" src="image/new hsg_1.png"/>&nbsp;skyhigh <span>CO-OP.HSG.SOC.LTD</span>
+        </div> 
+                
+                <center>
+                <h1>Register in Society</h1>
+                <div class="reg">
+                    
+                    </br></br>
+                    <b><label>Select Flat No:</label></b>&nbsp<select  style="width:100px;height:25px;background:rgba(0,0,0,0.5);color:white" name="flat" id="flat">
+                        <option value="101">101</option>
+                        <option value="102">102</option>
+                        <option value="103">103</option>
+                        <option value="104">104</option>
+                        <option value="105">105</option>
+                        <option value="106">106</option>
+                        <option value="107">107</option>
+                        <option value="108">108</option>
+                        <option value="109">109</option>
+                        <option value="110">110</option>
+                        <option value="111">111</option>
+                        <option value="112">112</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                    <b>Select Type:</b><input type="radio" name="type" value="owner" required>owner
+                    <input type="radio" name="type" value="tenant" required>tenant</br>
+                    </br> <input type="text" name="oname" placeholder="enter full name" required>
+                    <input type ="text" maxlength="10" name="mobnum" pattern="[]{}" placeholder="mobile number" required="">
+                    
+                    <input type="text" name="member" placeholder="no of family members" required>
+                    </br>
+
+                    <b>Date Of Birth:</b><input type="date" name="dte" required>
+                    <input type="text" name="uname" placeholder="username"  required>  
+                    <input type="password" name="pass" placeholder="password" id="p1" required>
+                    <input type="password" name="repass" placeholder="retype password" id="p2" oninput="check()" required></br><lable id="l2"></lable></br>
+                    <input type="email" name="email" id="email1" placeholder="email ID"><input type="button" id="b1" name="b1" onclick="sendOTP()" value="genrate OTP"><br>
+                    <lable id="done"></lable><br><br>
+                    <input type="hidden" id="hotp1" name="hotp">
+                    
+                    <div class="hoverchange"><input type="submit" class="btn" id="btn" name="btn" value="Submit" disabled="true"></div>
+                    </br>
+                    </br>
+
+                </div>
+               <div class="popup">
+                   <lable style="float:left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Enter OTP</b></lable>
+                     <input type="text" id="otp1" name="validate"><br>
+                     <lable id="match"></lable><br>
+                     <input type="button" id="b2" value="validate" ><br>
+                     <input type="button" id="chn" value="change Email ID">
+                     
+                     </div>
+            </center>
+            </br></br></br></br>
+            <div class="ft" align="center">
+                </br><p>follow us on</p>
+                <a href="https://www.facebook.com" ><img src="image/facebook.png" id="fb" height="25" width="25"></a>
+                <a href="https://www.instagram.com"><img src="image/insta.png" id="insta" height="25" width="25"></a>
+                <a href="https://www.twiter.com"><img src="image/twit.png" id="fb1" height="25" width="25"></a>
+
+                <p>"keep your society neet and clean"</p>
+                <p style="font-size:20px">skyhigh co-op hsg.soc.ltd</p>
+                <p style="font-size:15px"><i>
+                        plot no-25</br>
+                        sector-18,kamothe</br>
+                        pin-410209
+                    </i></p>
+            </div>
+        </form>
+    </body>
+</html>

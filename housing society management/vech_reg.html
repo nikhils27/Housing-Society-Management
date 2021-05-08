@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reg.css">
+        <style>
+           
+input[type=text]{
+                width:100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+}
+span{
+                tetx-transform:uppercase;
+                font-size:20px;
+                color:white;
+                text-shadow:2px 2px 2px black;
+            }
+             #i1 {
+                width:120px;
+                height:80px;
+                margin-bottom: -10px;
+                margin-top: 2px;
+              //  padding:0px;
+            }
+             .header{
+                width:100%;
+                background:rgba(0,0,0,0.5);
+                font-size:50px;
+                color:white; 
+                text-transform:uppercase;
+                text-shadow:2px 2px 2px black;
+                margin-top:0px;
+                text-align: left;
+               
+            }
+.add{
+font-size:20px;
+text-align:center;
+background:rgba(0,0,0,0.5);
+color:white;
+margin:10px 0;
+}
+.btn
+{
+width:100%;
+background:none;
+border:3px solid;
+color:black;
+padding: 5px;
+cursor:pointer;
+align:center;
+}
+.btn :hover{
+    background:black;
+    color:white;
+}
+input[type=email]{
+                width:100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+}
+input[type=password]{
+                width:100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+}
+input[type=date]{
+                width:100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+}
+.ft{
+    height: 300px;
+    background-color: #333;
+    width:100%;
+    margin-bottom:0px;
+    color: white; 
+}
+.ft p{
+margin-top:15px;
+margin-bottom:10px;
+font-size:20px
+}
+.ft img{
+margin:7px;
+}
+td{
+    margin-left: 10px
+     
+}
+ h1{
+               font-size: 30px;
+               background-color: rgba(0,0,0,0.5);
+               width:50%;
+               color:white;
+               
+            }
+        </style>
+    </head>
+    <body>
+        <form action="vech_reg.jsp" method="post">
+            <div class="header">
+            &nbsp;<img id="i1" src="image/new hsg_1.png"/>&nbsp;skyhigh <span>CO-OP.HSG.SOC.LTD</span>
+        </div>
+        
+        <center>    <h1>Vehicle Registration</h1></center>
+        <table align="center">
+        <tr>
+       
+            <td>Flat No:</td><td style="padding-bottom:10px"><select style="width:100px;height:25px;background:rgba(0,0,0,0.5);color:white;" name="flat">
+            <option value="101">101</option>
+            <option value="102">102</option>
+            <option value="103">103</option>
+            <option value="104">104</option>
+            <option value="105">105</option>
+            <option value="106">106</option>
+            <option value="107">107</option>
+            <option value="108">108</option>
+            <option value="109">109</option>
+            <option value="110">110</option>
+            <option value="111">111</option>
+            <option value="112">112</option> 
+                </select></td></tr>
+       
+        <tr><td>Select Parking Place:</td><td style="padding-bottom:10px"><select style="width:100px;height:25px;background:rgba(0,0,0,0.5);color:white;" name="park_id">    
+            <option value="p-001">p-001</option>
+            <option value="p-002">p-002</option>
+            <option value="p-003">p-003</option>
+            <option value="p-004">p-004</option>
+            <option value="p-005">p-005</option>
+            <option value="p-006">p-006</option>
+            <option value="p-007">p-007</option>
+            <option value="p-008">p-008</option>
+            <option value="p-009">p-009</option>
+            <option value="p-010">p-010</option> </select>
+            
+        
+       <tr><td>Vehicle Type:</td><td><input type="radio" name="vehicle" value="2_wheeler" >2 wheeler
+       <input type="radio" name="vehicle" value="4_wheeler">4 wheeler</td></tr>
+        <tr><td>Enter Vehicle Owner Name:</td><td><input type="text" name="vech_own_name"></td></tr>
+       <tr><td>Enter Vehicle Name:</td><td><input type="text" name="vech_name"></td></tr>
+       
+        <tr><td>Enter Vehicle Number:</td><td><input type ="text"  name="vech_no" ></td></tr>
+        <tr><td colspan="2"></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="btn" name="btn" value="submit"></td></tr>
+        </table>
+            </br></br></br></br>
+           
+               <div class="ft" align="center">
+</br><p>follow us on</p>
+  <a href="https://www.facebook.com" ><img src="image/facebook.png" id="fb" height="25" width="25"></a>
+  <a href="https://www.instagram.com"><img src="image/insta.png" id="insta" height="25" width="25"></a>
+ <a href="https://www.twiter.com"><img src="image/twit.png" id="fb1" height="25" width="25"></a>
+
+<p>"keep your society neet and clean"</p>
+<p style="font-size:20px">skyhigh co-op hsg.soc.ltd</p>
+<p style="font-size:15px"><i>
+plot no-25</br>
+sector-18,kamothe</br>
+pin-410209
+</i></p>
+</div> 
+       
+        </form>
+    </body>
+</html>

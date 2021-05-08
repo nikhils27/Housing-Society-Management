@@ -1,0 +1,262 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="">
+        <style> 
+            body {
+               // font-family:sans-serif;
+                padding: 0px 0px;
+                margin:0px 0px;
+            }
+            .header{
+                width:100%;
+                background:rgba(0,0,0,0.5);
+                font-size:50px;
+                color:white;
+                //text-align:center;
+                text-transform:uppercase;
+                text-shadow:2px 2px 2px black;
+                margin-top:10px;
+            }
+            a{
+                text-decoration: none;
+            }
+            .btn-group button {
+                background-color: rgba(0,0,0,0.5);
+                border: 1px solid #ddd;; 
+                color: white; 
+                padding: 12px 24px; 
+                cursor: pointer; 
+                width: 100%;
+                height:54px;
+                display: block; 
+            }
+            .btn-group button:not(:last-child) {
+                border-bottom: none; 
+            }
+            .btn-group button:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: rgba(0,0,0,0.5);
+                color: white;
+            }
+            .ft{
+                height: 300px;
+                background-color: #333;
+                width:100%;
+                margin-bottom:0px;
+                color: white; 
+            }
+            .ft p{
+                margin-top:20px;
+                margin-bottom:20px;
+                font-size:20px
+            }
+            .ft img{
+                margin:10px;
+            }
+            .image1,.image2,.image3,.image4{
+                height:373px;
+                width:100%;
+            }
+            .image2{
+                display: none;
+            }
+            .image3,.image4{
+                display:none;
+            }
+            #i1 {
+                width:120px;
+                height:80px;
+                margin-bottom: -10px;
+                margin-top: 2px;
+                //  padding:0px;
+            }
+            span{
+                tetx-transform:uppercase;
+                font-size:20px;
+                color:white;
+                text-shadow:2px 2px 2px black;
+            }
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                //height:px;
+                width:5px;
+                margin-top: -22px;
+                padding: 16px;
+                color: black;
+                font-weight: bold;
+                font-size: 15px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+
+                background-color:white;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            .prev{
+                left:0;
+            }
+            .prev:hover{
+                color:white;
+                background-color: black;
+            }
+            .next:hover{
+                color:white;
+                background-color: black;
+            }
+            .slidshow{
+                position:relative;
+            }
+            .dot,.dot1,.dot2,.dot3,.dot4 {
+                cursor: pointer;
+                height: 12px;
+                width: 12px;
+                margin: 0 2px;
+                background-color: white;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+                position:absolute;
+                //bottom:0;
+                top:94%;
+                //left:20%;
+                //align:center;
+            }
+            .dot{
+                left:44%;
+            }
+            .dot1{
+                left:47%;
+                
+            }
+            .dot2{
+                left:50%;
+            }
+              .dot3{
+                left:53%;
+            }
+              .dot4{
+                left:56%;
+            }
+            .dot:hover,.dot1:hover,.dot2:hover,.dot3:hover,.dot4:hover{
+                background-color:black;
+            }
+            .btn-group i{
+                font-size:17px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+          $(document).ready(function () {
+                $(".dot1").click(function () {
+                    $(".image1").hide();
+                    $(".image3").hide();
+                    $(".image4").hide();
+                    $(".image2").fadeIn(1000);
+                });
+                 $(".dot").click(function () {
+                    $(".image3").hide();
+                    $(".image4").hide();
+                    $(".image2").hide();
+                    $(".image1").fadeIn(1000);
+                });
+                $(".dot2").click(function () {
+                    $(".image1").hide();
+                    $(".image2").hide();
+                    $(".image4").hide();
+                    $(".image3").fadeIn(1000);
+                });
+                 $(".dot3").click(function () {
+                    $(".image1").hide();
+                    $(".image2").hide();
+                    $(".image3").hide();
+                    $(".image4").fadeIn(1000);
+                });
+                
+            });
+                
+        </script>
+         <script src="https://kit.fontawesome.com/bd1cc775cb.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="header">
+            &nbsp;<img id="i1" src="image/new hsg_1.png"/>&nbsp;skyhigh <span>CO-OP.HSG.SOC.LTD</span>
+        </div>
+        <div class="topnav">
+            <a class="active" href="homepage.html"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</a>
+            <a href="about_soc.jsp"><i class="fas fa-building"></i>&nbsp;&nbsp;About Society</a>
+            <a href="logout.jsp"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;logout</a>        
+        </div> 
+        <table style="width:100%;"><tr><td style="width:30%;">
+                    <div class="btn-group">
+                        <a href="member.jsp"><button><i class="fas fa-users"></i>&nbsp;&nbsp;user's block</button></a>
+                        <a href="maint.jsp"><button><i class="fas fa-tools"></i>&nbsp;&nbsp;view maintenance</button></a>
+                        <a href="vehicle.jsp"><button><i class="fas fa-car"></i>&nbsp;&nbsp;vehicles</button></a>
+                        <a href="complaint.jsp"><button><i class="fas fa-book-reader"></i>&nbsp;&nbsp;complaint book</button></a>
+                        <a href="notice.jsp"><button><i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;notice board</button></a>
+                        <a href="visitor.jsp"><button><i class="fas fa-user-clock"></i>&nbsp;&nbsp;visitors</button></a>
+                        <a href="about_soc.jsp"><button><i class="fas fa-building"></i>&nbsp;&nbsp;about society</button></a>
+
+                    </div>
+                </td><td style="width:69%;">
+                    <div class='slidshow'> 
+                        <img class="image1" id='10' src="image/socimg.jpg" alt="society image"/>
+                        <img class="image2" id='11' src="image/build11.jpg" alt="society image"/>
+                        <img class="image3" id='12' src="image/build12.jpg" alt="society image"/>
+                        <img class="image4" id='13' src="image/socimg.jpg" alt="society image"/>
+                        <span class="dot"></span>
+                        <span class="dot1"></span>
+                        <span class="dot2"></span>
+                        <span class="dot3"></span>
+                        <span class="dot4"></span>
+                        <a class="prev" onclick="next()">&#10094;</a>
+                        <a class="next" onclick="next()">&#10095;</a>
+                    </div> 
+                </td></tr>
+        </table>
+        <div class="ft" align="center">
+            </br><p>follow us on</p>
+            <a href="https://www.facebook.com" ><img src="image/facebook.png" id="fb" height="25" width="25"></a>
+            <a href="https://www.instagram.com"><img src="image/insta.png" id="insta" height="25" width="25"></a>
+            <a href="https://www.twiter.com"><img src="image/twit.png" id="fb1" height="25" width="25"></a>
+            <p>"keep your society neet and clean"</p>
+            <p style="font-size:20px">skyhigh co-op hsg.soc.ltd</p>
+            <p style="font-size:15px"><i>
+                    plot no-25</br>
+                    sector-18,kamothe</br>
+                    pin-410209
+                </i></p>
+        </div> 
+    </body>
+</html>
