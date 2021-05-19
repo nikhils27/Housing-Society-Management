@@ -1,5 +1,19 @@
 # Housing-Society-Management
 
+Housing society management System is used in day-to-day works done in housing societies.
+work done by our system- generating maintenance bills, adding notices, recieve complaints, store society members data, parking space mangement,visitors management and many more...
+
+
+technology used- 
+
+FRONT-END :- HTML, CSS, JavaScript, JQuery
+
+BACKEND   :- Java(JSP/servlets)
+
+DATABASE  :- MySQL
+
+TOOLS     :- Netbeans, Wamp-server 
+
 screenshots-
 
 ![home-page](https://user-images.githubusercontent.com/71888890/117542471-64c09f80-b036-11eb-9e40-d1d8a2e0ceaf.PNG)
